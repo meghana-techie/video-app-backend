@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Video App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>🎬 VideoApp</h2>
+    <div>
+      <span id="userEmail">Guest</span>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- SIGNUP -->
+    <div class="card" id="signupCard">
+      <h2>Signup</h2>
+      <input id="sname" placeholder="Name" />
+      <input id="semail" placeholder="Email" />
+      <input id="spassword" type="password" placeholder="Password" />
+      <button type="button" onclick="signup()">Signup</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="card" id="loginCard">
+      <h2>Login</h2>
+      <input id="lemail" placeholder="Email" />
+      <input id="lpassword" type="password" placeholder="Password" />
+      <button type="button"  onclick="login()">Login</button>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="card hidden" id="profileCard">
+      <h2>Profile</h2>
+      <button type="button" onclick="getProfile()">Load Profile</button>
+      <pre id="profileBox"></pre>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="card hidden" id="uploadCard">
+      <h2>Upload Video</h2>
+      <input id="videoTitle" placeholder="Video Title" />
+      <input id="videoFile" type="file" accept="video/*" />
+      <button type="button" onclick="uploadVideo()">Upload</button>
+    </div>
+
+    <!-- VIDEOS GRID -->
+    <div class="video-grid hidden" id="videoGrid"></div>
+
+  </main>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
